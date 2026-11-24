@@ -181,10 +181,22 @@ main .wrap { padding-block: 14px 120px; display: grid; gap: 12px; }
 [dir="rtl"] .search input { padding: 13px 46px 13px 44px; }
 [dir="rtl"] .search svg { left: auto; right: 14px; }
 [dir="rtl"] .search .clear { right: auto; left: 8px; }
+.search.has-mic input { padding-right: 84px; }
+.search.has-mic .clear { right: 46px; }
+.search .mic { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border-radius: 10px; border: 0; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.search .mic svg { position: static; transform: none; width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.2; }
+.search .mic.on { background: var(--up, #c0392b); color: #fff; animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(192,57,43,.18); } }
+[dir="rtl"] .search.has-mic input { padding-right: 46px; padding-left: 84px; }
+[dir="rtl"] .search.has-mic .clear { right: auto; left: 46px; }
+[dir="rtl"] .search .mic { right: auto; left: 6px; }
 [dir="rtl"] .item .en, [dir="rtl"] .item .hu, [dir="rtl"] .sheet .row .en, [dir="rtl"] .suggest .opt { text-align: right; }
 [dir="rtl"] .tag { border-radius: 8px 4px 4px 8px; padding: 3px 14px 3px 10px; }
 [dir="rtl"] .tag::before { left: auto; right: 5px; }
 #langBtn { font-weight: 700; }
+.hen { font-weight: 800; font-size: 1.05rem; line-height: 1.3; }
+.item .en.en2 { font-weight: 600; font-size: .92rem; }
+[dir="rtl"] .hen, [dir="rtl"] .oline .en.hen { direction: rtl; text-align: right; unicode-bidi: normal; }
 @media (max-width: 520px) {
   .brand h1 { font-size: 1.25rem; }
   .item { padding: 10px 12px; }
@@ -214,6 +226,7 @@ main .wrap { padding-block: 14px 120px; display: grid; gap: 12px; }
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
       <input id="q" type="search" role="combobox" aria-controls="suggest" aria-autocomplete="list" autocomplete="off" enterkeyhint="search" placeholder="Search, e.g. red wine" data-ph-en="Search, e.g. non mevushal wine under 5000" data-ph-he="חיפוש, למשל: יין לא מבושל עד 5000" aria-label="Search products">
       <button class="clear" id="clear" type="button" aria-label="Clear search" hidden>×</button>
+      <button class="mic" id="mic" type="button" aria-label="Speak your search" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
       <div class="suggest" id="suggest" role="listbox" aria-label="Suggestions" hidden></div>
     </div>
     <div class="chips" id="chips" role="toolbar" aria-label="Categories"></div>
@@ -360,6 +373,7 @@ function applyLang() {
   document.querySelectorAll('[data-ph-en]').forEach(function (el) { el.placeholder = LANG === 'he' ? el.dataset.phHe : el.dataset.phEn; });
   var o = $('sort').options; o[0].text = L('Best match', 'הכי מתאים'); o[1].text = L('Price: low to high', 'מחיר: מהזול'); o[2].text = L('Price: high to low', 'מחיר: מהיקר'); o[3].text = L('Name A–Z', 'שם א–ת');
   $('langBtn').textContent = LANG === 'he' ? 'English' : 'עברית';
+  $('mic').setAttribute('aria-label', L('Speak your search', 'חיפוש בקול'));
 }
 
 // ---------- categories ----------
@@ -799,6 +813,17 @@ function stepper(key) {
   if (!n) return '<button type="button" class="add" data-add="' + esc(key) + '">' + L('+ Add', '+ הוספה') + '</button>';
   return '<span class="step"><button type="button" data-dec="' + esc(key) + '" aria-label="' + L('One less', 'אחד פחות') + '">−</button><span>' + n + (function () { var it = itemByKey(key), u = it && qtyUnit(it); return u ? ' ' + u : ''; })() + '</span><button type="button" data-inc="' + esc(key) + '" aria-label="' + L('One more', 'אחד יותר') + '">+</button></span>';
 }
+// in Hebrew: a Hebrew name built from what the product is (type, taste, origin, size), shown bold on top
+function hebParts(it) {
+  if (LANG !== 'he') return null;
+  var f = it.f, head = [f.type ? tv(f.type) : catName(it.cat)];
+  if (f.taste) head.push(tv(f.taste));
+  if (f.origin) head.push(tv(f.origin));
+  var used = [f.type || it.cat, f.taste, f.origin], rest = f.bits.filter(function (b) { return used.indexOf(b) < 0; });
+  var size = rest.filter(function (b) { return /\d/.test(b); });
+  var brand = (it.brand || '').replace(/[_]+/g, ' ').trim();
+  return { title: esc(head.join(' ')) + (brand && brand.length > 1 ? ' <bdi>' + esc(brand) + '</bdi>' : '') + (size.length ? ' · <bdi>' + esc(size[0]) + '</bdi>' : ''), rest: rest.filter(function (b) { return b !== size[0]; }) };
+}
 function itemHtml(it) {
   var meta = '<span class="pill">' + dot(it.cat) + catName(it.cat) + '</span>';
   if (it.isNew) meta += '<span class="pill new">' + L('New', 'חדש') + '</span>';
@@ -806,10 +831,10 @@ function itemHtml(it) {
     var up = it.price > it.oldPrice;
     meta += '<span class="pill ' + (up ? 'up' : 'down') + '">' + (up ? L('Price up', 'התייקר') : L('Price down', 'הוזל')) + L(' · was ', ' · היה ') + money(it.oldPrice) + '</span>';
   }
-  var ex = explained[it.key];
-  return '<div class="item"><div class="nm"><div class="en">' + esc(it.shownEn) + '</div>' +
+  var ex = explained[it.key], hp = hebParts(it);
+  return '<div class="item"><div class="nm">' + (hp ? '<div class="hen">' + hp.title + '</div><div class="en en2">' : '<div class="en">') + esc(it.shownEn) + '</div>' +
     (it.shownHu !== it.shownEn ? '<div class="hu">' + esc(it.shownHu) + '</div>' : '') +
-    '<div class="what">' + it.f.bits.map(function (b) { return '<bdi>' + esc(CATS[b] ? catName(b) : tv(b)) + '</bdi>'; }).join(' · ') + (sampleFn && !ex ? ' · <button type="button" class="explain" data-explain="' + esc(it.key) + '">' + L('What is it?', 'מה זה?') + '</button>' : '') + '</div>' +
+    '<div class="what">' + (hp ? hp.rest : it.f.bits).map(function (b) { return '<bdi>' + esc(CATS[b] ? catName(b) : tv(b)) + '</bdi>'; }).join(' · ') + (sampleFn && !ex ? ' · <button type="button" class="explain" data-explain="' + esc(it.key) + '">' + L('What is it?', 'מה זה?') + '</button>' : '') + '</div>' +
     (ex ? '<div class="aiex">' + esc(typeof ex === 'string' ? ex : (LANG === 'he' && ex.he) || ex.en || '') + '</div>' : '') +
     '<div class="meta">' + meta + '</div></div>' +
     '<div class="side"><span class="tag">' + money(it.price) + ' <small>Ft</small></span>' + stepper(it.key) + '</div></div>';
@@ -1221,7 +1246,8 @@ function renderSheet() {
   var o = orderLines();
   if (!o.count) { closeSheet(); return; }
   $('sheetBody').innerHTML = o.lines.map(function (l) {
-    return '<div class="oline"><div style="min-width:0"><div class="en">' + esc(l.it ? l.it.shownEn : l.k) + '</div>' +
+    var hp = l.it && hebParts(l.it);
+    return '<div class="oline"><div style="min-width:0">' + (hp ? '<div class="en hen">' + hp.title + '</div>' : '') + '<div class="' + (hp ? 'hu' : 'en') + '">' + esc(l.it ? l.it.shownEn : l.k) + '</div>' +
       (l.it ? (l.it.shownHu !== l.it.shownEn ? '<div class="hu">' + esc(l.it.shownHu) + '</div>' : '') : '<div class="gone">' + L('Not in the current list, so it will not go into the Excel file', 'לא נמצא ברשימה הנוכחית, ולכן לא ייכנס לאקסל') + '</div>') +
       '</div><button type="button" class="rm" data-rm="' + esc(l.k) + '" aria-label="' + L('Remove from order', 'הסרה מההזמנה') + '">×</button>' +
       '<div class="calc">' + stepper(l.k) + (l.it ? '<span class="unit">× ' + money(l.it.price) + ' Ft</span><span class="lt">' + money(l.it.price * l.n) + ' Ft</span>' : '') + '</div></div>';
@@ -1414,6 +1440,36 @@ window.addEventListener('dragleave', function () { if (--dragN <= 0) { dragN = 0
 window.addEventListener('dragover', function (e) { e.preventDefault(); });
 window.addEventListener('drop', function (e) { e.preventDefault(); dragN = 0; $('drop').hidden = true; handleFile(e.dataTransfer.files[0]); });
 document.addEventListener('keydown', function (e) { if (e.key !== 'Escape') return; if (!$('sheet').hidden) closeSheet(); if (!$('fsheet').hidden) closeFilters(); });
+
+// ---------- voice search (speak instead of typing) ----------
+var SR = window.SpeechRecognition || window.webkitSpeechRecognition, rec = null;
+if (SR) { $('mic').hidden = false; document.querySelector('.search').classList.add('has-mic'); }
+$('mic').addEventListener('click', function () {
+  if (rec) { rec.stop(); return; }
+  try { rec = new SR(); } catch (e) { toast(L('Voice input isn\'t available in this browser.', 'הקלטה קולית לא זמינה בדפדפן הזה.')); return; }
+  rec.lang = LANG === 'he' ? 'he-IL' : 'en-US';
+  rec.interimResults = true; rec.maxAlternatives = 1; rec.continuous = false;
+  var heard = '';
+  $('mic').classList.add('on'); $('mic').setAttribute('aria-label', L('Stop listening', 'עצירת ההקלטה'));
+  toast(L('Listening… say what you need', 'מקשיב… אמרו מה אתם צריכים'));
+  rec.onresult = function (e) {
+    heard = ''; for (var i = 0; i < e.results.length; i++) heard += e.results[i][0].transcript;
+    $('q').value = heard; run(true);
+  };
+  rec.onerror = function (e) {
+    if (e.error === 'not-allowed' || e.error === 'service-not-allowed') toast(L('Allow the microphone for this site to search by voice.', 'אשרו גישה למיקרופון כדי לחפש בקול.'));
+    else if (e.error === 'no-speech') toast(L('I didn\'t hear anything. Try again.', 'לא שמעתי כלום. נסו שוב.'));
+    else if (e.error !== 'aborted') toast(L('Voice input stopped. Try again.', 'ההקלטה נעצרה. נסו שוב.'));
+  };
+  rec.onend = function () {
+    rec = null; $('mic').classList.remove('on'); $('mic').setAttribute('aria-label', L('Speak your search', 'חיפוש בקול'));
+    if (!heard.trim()) return;
+    $('q').value = heard.trim(); closeSuggest(); run(true);
+    // the same smart step as pressing Enter: let the assistant take over when the words alone don't find it
+    if (lastQ && !lastQ.ai && sampleFn && aiState === 'idle' && (lastResults.length === 0 || lastQ.unknown.length)) askAssistant();
+  };
+  try { rec.start(); } catch (e) { rec = null; $('mic').classList.remove('on'); }
+});
 
 $('langBtn').addEventListener('click', function () {
   LANG = LANG === 'he' ? 'en' : 'he'; store('oblath.lang.v1', LANG); applyLang();
