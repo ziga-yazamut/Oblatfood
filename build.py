@@ -1,0 +1,8 @@
+import json
+s=open('src/template.html').read()
+data=open('src/data.json').read().replace('</','<\\/')
+s=s.replace('/*PARSER*/',open('src/parser.js').read()).replace('/*DATA*/',data)
+if not s.lstrip().lower().startswith('<!doctype'):
+    s=s.replace('<title>Oblath Product Finder</title>\n','',1)
+    s='<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Oblath Product Finder</title></head><body>\n'+s+'\n</body></html>\n'
+open('site/index.html','w').write(s)
