@@ -1,0 +1,260 @@
+0|סירופ 1883 בלו קוראסאו, 1 ליטר
+1|סירופ 1883 אוכמניות, 1 ליטר
+2|סירופ 1883 קרמל, 1 ליטר
+3|סירופ 1883 קינמון, 1 ליטר
+4|סירופ 1883 קוקוס, 1 ליטר
+5|סירופ 1883 סמבוק (פרחי בז), 1 ליטר
+6|מחית תותים 1883, 1 ליטר
+7|סירופ 1883 גרנדין פירות יער, 1 ליטר
+8|סירופ 1883 ליים, 1 ליטר (בקבוק)
+9|סירופ 1883 מנגו, 1 ליטר (בקבוק)
+10|סירופ 1883 מלון, 1 ליטר
+11|סירופ 1883 מוחיטו נענע, 1 ליטר
+12|סירופ 1883 סוכר קנים, 1 ליטר
+13|סירופ 1883 תפוזים, 1 ליטר (בקבוק)
+14|סירופ 1883 פסיפלורה, 1 ליטר
+15|סירופ 1883 אפרסק, 1 ליטר (בקבוק)
+16|סירופ 1883 רימונים, 1 ליטר
+17|סירופ 1883 פטל, 1 ליטר
+18|סירופ 1883 תות, 1 ליטר
+19|סירופ 1883 וניל, 1 ליטר
+20|סירופ 1883 אבטיח, 1 ליטר
+21|מסטיק Airwaves בלאקמינט, 14 גרם
+22|מסטיק Airwaves דומדמניות שחורות, 14 גרם
+23|וויסקי Aberfeldy בן 12, 0.7 ליטר 40%
+24|וודקה Absolut Blue, 1 ליטר 40%
+25|וודקה Absolut וניל, 0.7 ליטר 38%
+26|רום Abuelo בן 12, 0.7 ליטר 40%
+27|רום Abuelo בן 7, 0.7 ליטר 40%
+28|רום Abuelo Añejo, 0.7 ליטר 40%
+29|רום Abuelo Three Angels, 0.7 ליטר 43%
+30|ערק עלית ישראלי (ליקר אניס), 0.7 ליטר 40%
+31|וויסקי Ardbeg בן 10, 0.7 ליטר 46%
+32|רום Bacardi Carta Blanca, 1 ליטר 37.5%
+33|רום מתובל Bacardi Spiced, 0.7 ליטר 35%
+34|ליקר שמנת Baileys אירי, 1 ליטר 17%
+35|ג'ין Beefeater, 1 ליטר 40%
+36|וודקה Beluga Noble, 1 ליטר 40%
+37|וודקה Belvedere, 1 ליטר 40%
+38|וויסקי BenRiach בן 10, 0.7 ליטר 43%
+39|ליקר ביצים Bols Advocaat, 0.7 ליטר 15%
+40|ג'ין Bombay Sapphire, 1 ליטר 40%
+41|בירה Budweiser, פחית 0.5 ליטר
+42|ביטר Campari, 1 ליטר 25%
+43|וויסקי Caol Ila בן 12, 0.7 ליטר 43%
+44|וויסקי Chivas Regal בן 12, 1 ליטר
+45|ליקר תפוזים Cointreau, 0.7 ליטר 40%
+46|בירה Corona Extra, בקבוק 0.355 ליטר
+47|רום Dictador בן 12, 0.7 ליטר 40%
+48|בירה Dreher Gold, בקבוק 0.33 ליטר
+49|בירת חיטה Edelweiss Hefetrüb, בקבוק 0.5 ליטר 5.3%
+50|טקילה El Jimador Blanco, 1 ליטר 38%
+51|טקילה El Jimador Reposado, 1 ליטר 38%
+52|וודקה Finlandia, 1 ליטר 40%
+53|רום Flor de Caña Gran Reserva בן 7, 0.7 ליטר 40%
+54|וויסקי Glencadam בן 15, 0.7 ליטר 46%
+55|וויסקי Glenfiddich בן 12, 0.7 ליטר 40%
+56|וויסקי Glengoyne בן 10, 0.7 ליטר 40%
+57|וויסקי Glengoyne בן 12, 0.7 ליטר 43%
+58|וויסקי Glengoyne בן 15, 0.7 ליטר 43%
+59|וויסקי Glenlivet בן 12, 0.7 ליטר 40%
+60|וויסקי Glenmorangie Original בן 12, 0.7 ליטר 40%
+61|ג'ין Gordon's, 1 ליטר 37.5%
+62|וודקה Grey Goose, 1 ליטר 40%
+63|ברנדי Hafner XO בן 12
+64|גראפה Hafner יין קרח, 700 מ"ל
+65|ליקר דובדבנים Heering Cherry, 0.7 ליטר 24%
+66|בירה Heineken, בקבוק 0.33 ליטר
+67|בירה Heineken, בקבוק 0.5 ליטר
+68|בירה Heineken, חבית 20 ליטר 5%
+69|בירה Heineken, פחית 0.5 ליטר 5%
+70|בירה Heineken ללא אלכוהול 0.0%, פחית 0.33 ליטר
+71|בירה Heineken, פחית 0.33 ליטר
+72|ג'ין Hendrick's, 0.7 ליטר 44%
+73|וויסקי Highland Park בן 10 Viking Scars, 0.7 ליטר 40%
+74|וויסקי Isle of Jura בן 10, 0.7 ליטר 40%
+75|וויסקי Isle of Jura בן 12, 0.7 ליטר 40%
+76|וויסקי Isle of Jura בן 18, 0.7 ליטר 44%
+77|וויסקי Jack Daniel's Gentleman Jack, 0.7 ליטר 40%
+78|וויסקי Jack Daniel's, 1 ליטר 40%
+79|וויסקי Johnnie Walker Double Black, 0.7 ליטר 40%
+80|וויסקי Johnnie Walker Gold Label Reserve, 0.7 ליטר 40%
+81|וויסקי Johnnie Walker Red Label, 1 ליטר 40%
+82|טקילה Jose Cuervo Clásico סילבר, 1 ליטר 38%
+83|וויסקי Koval ארבעה דגנים, 0.5 ליטר 47%
+84|וויסקי Laphroaig בן 10, 0.7 ליטר 40%
+85|בירה בלגית בטעם תפוח Lindemans Apple, בקבוק 0.25 ליטר
+86|בירה בלגית בטעם דומדמניות Lindemans Cassis, בקבוק 0.25 ליטר
+87|בירה בלגית Lindemans Faro, בקבוק 0.25 ליטר 4.5%
+88|בירה בלגית בטעם פטל Lindemans Framboise, בקבוק 0.25 ליטר
+89|בירה בלגית חמצמצה בטעם דובדבן Lindemans Kriek, בקבוק 0.25 ליטר
+90|בירה בלגית בטעם אפרסק Lindemans Pêcheresse, בקבוק 0.25 ליטר
+91|בירה בטעם פירות טרופיים Lindemans Tarot d'Or, 0.25 ליטר
+92|בירה בטעם פירות יער Lindemans Tarot Noir, 0.25 ליטר 8%
+93|ליקר שקדים Luxardo Amaretto di Saschira, 0.7 ליטר
+94|אפריטיף תפוזים Luxardo Aperitivo, 0.7 ליטר 11%
+95|ליקר משמש Luxardo Apricot, 0.7 ליטר 30%
+96|ליקר קפה Luxardo Espresso, 0.7 ליטר 27%
+97|ליקר לימון Luxardo Limoncello, 0.7 ליטר 27%
+98|פלינקה תפוחים Matheus (כשר), 0.5 ליטר 40%
+99|פלינקה משמשים Matheus (כשר), 0.5 ליטר 44%
+100|פלינקה דובדבנים Matheus (כשר), 0.5 ליטר 40%
+101|פלינקה שזיפים Matheus (כשר), 0.5 ליטר 40%
+102|פלינקה אגסים Matheus Vilmos (כשר), 0.5 ליטר 40%
+103|וויסקי ישראלי Milk & Honey Peated, 0.7 ליטר 46%
+104|וויסקי ישראלי Milk & Honey רימון, 0.7 ליטר 40%
+105|וויסקי ישראלי Milk & Honey שרי, 0.7 ליטר 46%
+106|וויסקי ישראלי Milk & Honey סינגל מאלט, 0.7 ליטר 46%
+107|וויסקי Monkey Shoulder, 0.7 ליטר 40%
+108|וויסקי Old Pulteney בן 12, 0.7 ליטר 40%
+109|וויסקי אירי Redbreast בן 12, 0.7 ליטר 40%
+110|וודקה Russian Standard Original, 1 ליטר 40%
+111|טקילה Sierra Blanco, 1 ליטר 38%
+112|וויסקי Smokehead, 0.7 ליטר 43%
+113|בירה Soproni IPA, בקבוק 0.33 ליטר 4.8%
+114|וויסקי Speyburn בן 10, 0.7 ליטר 40%
+115|וויסקי Speyburn Ex-Bourbon, 0.7 ליטר 40%
+116|סיידר Strongbow Gold, 0.33 ליטר
+117|סיידר תפוחים ופירות אדומים Strongbow, 0.33 ליטר 4.5%
+118|וויסקי Talisker בן 10, 0.7 ליטר 45.8%
+119|וויסקי אירי Teeling Small Batch, 0.7 ליטר 46%
+120|וויסקי The Famous Grouse, 1 ליטר 40%
+121|וויסקי Tomintoul Tlàth, 0.7 ליטר 40%
+122|ליקר צמחים ישראלי Tubi 60, 0.77 ליטר 40%
+123|ליקר צמחים ישראלי Tubi Nova One, 0.7 ליטר 20%
+124|ליקר צמחים Unicum Barista, 1 ליטר 34.5%
+125|ביטר תפוזים Unicum, 1 ליטר 34.5%
+126|דבש פרחים Golden Nectar (צנצנת), 500 גרם
+127|אבקת מרק עוף Barman פרווה, 1 ק"ג
+128|חומץ בלסמי Bartenura Reserve, 250 מ"ל
+129|חומץ בלסמי Bartenura, 500 מ"ל
+130|שוקולד מריר טבעוני אורגני Benjamíssimo עם מי ורדים בולגריים, 60 גרם
+131|שוקולד מריר טבעוני אורגני Benjamíssimo צ'יה ואשכולית, 60 גרם
+132|שוקולד מריר טבעוני אורגני Benjamíssimo נענע ומאקה, 60 גרם
+133|שוקולד קוקוס טבעוני אורגני Benjamíssimo עם שקדים קלויים, 60 גרם
+134|טבלת קקאו לבן טבעונית אורגנית Benjamíssimo עם קפה נטול קפאין, 60 גרם
+135|טבלת קקאו לבן טבעונית אורגנית Benjamíssimo צוף פרחי קוקוס, 60 גרם
+136|טבלת קקאו לבן טבעונית אורגנית Benjamíssimo מאצ'ה ולימון, 60 גרם
+137|אבקת קקאו ממותקת Berman פרווה, 1 ק"ג
+138|דמי פיקדון (DRS)
+139|ממרח קקאו ואגוזי לוז אורגני Bett'r ללא תוספת סוכר, 250 גרם
+140|ממרח קשיו אורגני Bett'r, 250 גרם
+141|ממרח שקדים אורגני Bett'r, 250 גרם
+142|חמאת בוטנים קראנצ'י אורגנית Bett'r, 250 גרם
+143|מרגרינה למריחה Bolero 80%, 2×5 ק"ג
+144|יין אדום יבש ספרדי Adar 2010, לא מבושל, 750 מ"ל
+145|יין אדום יבש צרפתי Aimé Arnoux Côtes du Rhône, 750 מ"ל
+146|יין אדום צרפתי Aimé Arnoux Gigondas 2022, לא מבושל, 750 מ"ל
+147|יין אדום יבש צרפתי Aimé Arnoux Vacqueyras 2022, 750 מ"ל
+148|יין אדום יבש איטלקי Amicale Corvina Limited Edition 2022, 750 מ"ל
+149|יין אדום יבש איטלקי Amicale Rosso 2023, לא מבושל, 750 מ"ל
+150|יין לבן יבש איטלקי Amicale Bianco Veneto 2023, 750 מ"ל
+151|יין אדום ישראלי Barkan Altitude קברנה סוביניון 720 2018, 750 מ"ל
+152|יין אדום ישראלי Barkan Altitude קברנה סוביניון 624 2021, 750 מ"ל
+153|יין אדום יבש ישראלי Barkan Assemblage Reichan 2018, 750 מ"ל
+154|יין אדום יבש ישראלי Barkan Classic קברנה סוביניון 2024, 750 מ"ל
+155|יין לבן יבש ישראלי Barkan Classic שרדונה 2025, 750 מ"ל
+156|יין לבן חצי יבש ישראלי Barkan Classic גוורצטרמינר 2024, 750 מ"ל
+157|יין אדום יבש ישראלי Barkan Classic מרלו ארגמן 2023, 750 מ"ל
+158|יין אדום יבש ישראלי Barkan Classic פטיט סירה 2023, 750 מ"ל
+159|יין אדום יבש ישראלי Barkan Classic פינו נואר 2024, 750 מ"ל
+160|יין לבן ישראלי Barkan Classic ריזלינג קולומבר 2024, 750 מ"ל
+161|יין לבן יבש ישראלי Barkan Classic סוביניון בלאן 2025, 750 מ"ל
+162|יין אדום יבש ישראלי Barkan Classic שיראז 2024, 750 מ"ל
+163|יין לבן יבש ישראלי Barkan Gold שרדונה 2024, 750 מ"ל
+164|יין אדום יבש ישראלי Barkan Gold Edition מרלו 2024, 750 מ"ל
+165|יין לבן חצי יבש ישראלי Barkan Monfort Village סמיון 2022, 750 מ"ל
+166|יין לבן מתוק מבעבע ישראלי Barkan מוסקטו 2024, 750 מ"ל
+167|יין אדום יבש ישראלי Barkan Platinum קברנה סוביניון 2021, 750 מ"ל
+168|יין אדום יבש ישראלי Barkan Premieur קברנה סוביניון-מלבק 2023, 750 מ"ל
+169|יין אדום יבש ישראלי Barkan Reserve קברנה סוביניון 2024, 750 מ"ל
+170|יין לבן יבש ישראלי Barkan Reserve שרדונה, בד"ץ, 750 מ"ל
+171|יין אדום יבש ישראלי Barkan Reserve מרלו 2023, 750 מ"ל
+172|יין רוזה יבש ישראלי Barkan Rosé Blush 2025, 750 מ"ל
+173|יין אדום יבש ישראלי Barkan Segal's קברנה סוביניון 2023, 750 מ"ל
+174|יין אדום יבש ישראלי Barkan Seven Hills קברנה סוביניון 2023, 750 מ"ל
+175|יין לבן יבש ישראלי Barkan Seven Hills שרדונה 2024, 750 מ"ל
+176|יין אדום יבש קליפורני Baron Herzog קברנה סוביניון 2022, 750 מ"ל
+177|יין לבן יבש קליפורני Baron Herzog שרדונה 2023, 750 מ"ל
+178|יין אדום יבש קליפורני Baron Herzog מרלו 2023, 750 מ"ל
+179|יין אדום יבש קליפורני Baron Herzog זינפנדל 2022, 750 מ"ל
+180|יין לבן יבש קליפורני Baron Herzog סוביניון בלאן 2022, 750 מ"ל
+181|יין אדום חצי מתוק מבעבע איטלקי Bartenura Malvasia 2024, 750 מ"ל
+182|יין לבן מתוק מבעבע איטלקי Bartenura מוסקטו (הבקבוק הכחול), 750 מ"ל
+183|יין מוסקטו מתוק מבעבע איטלקי Bartenura, פחיות 250 מ"ל
+184|יין לבן יבש איטלקי Bartenura פינו גריג'יו 2024, 750 מ"ל
+185|יין מבעבע לבן יבש איטלקי Bartenura פרוסקו, 750 מ"ל
+186|יין רוזה מבעבע איטלקי Bartenura Rosato, פחיות 250 מ"ל
+187|יין אדום יבש איטלקי Bartenura Rosso d'Italiano, 750 מ"ל
+188|יין אדום יבש איטלקי Bartenura Rosso Toscano 2022, 750 מ"ל
+189|יין לבן מבעבע קלות איטלקי Belle Terre Emilia, 750 מ"ל
+190|יין לבן יבש צרפתי Bourillon Dorléans Vouvray Sec 2023, 750 מ"ל
+191|יין אדום יבש ספרדי Capcanes Peraj Petita 2023, מבושל, 750 מ"ל
+192|קאווה ספרדית מבעבעת Elviwines, לא מבושל, 750 מ"ל
+193|יין לבן יבש אלזסי Cave du Bollenberg גוורצטרמינר, 750 מ"ל
+194|יין לבן יבש אלזסי Cave du Bollenberg ריזלינג, 750 מ"ל
+195|יין לבן יבש אלזסי Cave du Bollenberg סילבנר, 750 מ"ל
+196|יין אדום צרפתי Château Bellevue Morgon 2023, 750 מ"ל
+197|יין אדום יבש צרפתי Château Canon Chaigneau 2023, 750 מ"ל
+198|יין אדום יבש צרפתי Château de Parsac Rothschild Montagne St-Émilion 2023, 750 מ"ל
+199|יין אדום יבש צרפתי Château du Vieux Puit Blaye 2022, 750 מ"ל
+200|יין אדום יבש צרפתי Château Fourcas Dupré Listrac-Médoc 2021, 750 מ"ל
+201|יין אדום יבש צרפתי Château Fourcas Dupré Listrac-Médoc 2022, 750 מ"ל
+202|יין אדום יבש צרפתי Château Grand Cormier Lalande de Pomerol 2021, 750 מ"ל
+203|יין אדום יבש צרפתי Château Grand Rivallon Saint-Émilion 2022, 750 מ"ל
+204|יין אדום יבש צרפתי Château Haut Perdrias 2022, 750 מ"ל
+205|יין אדום יבש צרפתי Château Haut Phillipon Single Vineyard 2023, 750 מ"ל
+206|יין לבן מתוק צרפתי Château Haut Phillipon Moelleux, 750 מ"ל
+207|יין אדום יבש צרפתי Château Haut Vallon 2022, 750 מ"ל
+208|יין אדום יבש צרפתי Château Holden Haut-Médoc 2021, 750 מ"ל
+209|יין אדום יבש צרפתי Château L'Haur du Chay קברנה סוביניון, 750 מ"ל
+210|יין אדום יבש צרפתי Château L'Haur du Chay מרלו, 750 מ"ל
+211|יין לבן יבש צרפתי Château La France 2023, 750 מ"ל
+212|יין אדום יבש צרפתי Château La Bessane Margaux 2021, 750 מ"ל
+213|יין אדום יבש צרפתי Château La Garricq Moulis-Médoc 2022, 750 מ"ל
+214|יין אדום יבש צרפתי Château La Perrière Bordeaux Supérieur 2022, 750 מ"ל
+215|יין אדום יבש צרפתי Château La Perrière Reserve Bordeaux Supérieur, 750 מ"ל
+216|יין אדום צרפתי Château Lamothe-Bergeron Haut-Médoc 2023, 750 מ"ל
+217|יין אדום צרפתי Château Larcis Jaumat Saint-Émilion Grand Cru 2022, 750 מ"ל
+218|יין אדום צרפתי Château Les Riganes Bordeaux 2023, מבושל, 187 מ"ל
+219|יין אדום יבש צרפתי Château Les Riganes קברנה פרנק 2022, 750 מ"ל
+220|יין אדום יבש צרפתי Château Les Riganes קברנה סוביניון 2023, 750 מ"ל
+221|יין אדום יבש צרפתי Château Les Riganes מלבק 2023, 750 מ"ל
+222|יין אדום יבש צרפתי Château Les Riganes מרלו 2023, 750 מ"ל
+223|יין אדום יבש צרפתי Château Les Riganes Reserve 2022, 750 מ"ל
+224|יין לבן חצי יבש צרפתי Château Les Riganes Bordeaux 2023, 750 מ"ל
+225|יין אדום צרפתי Château Malmaison Nadine de Rothschild Moulis-en-Médoc, 750 מ"ל
+226|יין אדום יבש צרפתי Château Martin Saint-Estèphe 2023, 750 מ"ל
+227|יין אדום יבש צרפתי Château Romefort Haut-Médoc 2023, 750 מ"ל
+228|יין אדום אורגני צרפתי Château Roubine Cru Classé Lion & Dragon 2021, 750 מ"ל
+229|יין אדום צרפתי Château Roubine Cru Classé Premium Côtes de Provence, 750 מ"ל
+230|יין אדום צרפתי Château Saint Corbian Saint-Estèphe 2022, 750 מ"ל
+231|יין אדום יבש צרפתי Château Signac Côtes du Rhône 2020, 750 מ"ל
+232|יין אדום יבש צרפתי Château Signac Côtes du Rhône 2023, 750 מ"ל
+233|יין אדום יבש צרפתי Château St. Martin Estèphe 2021, 750 מ"ל
+234|יין אדום יבש צרפתי אורגני Château Trijet Bordeaux 2022, 750 מ"ל
+235|יין אדום יבש צרפתי Château Vieux Puit קברנה סוביניון 2024, 750 מ"ל
+236|יין אדום יבש צרפתי Château Vieux Puit מלבק 2023, 750 מ"ל
+237|יין אדום יבש צרפתי Château Vieux Puit פטי ורדו, 750 מ"ל
+238|יין לבן יבש צרפתי Château Vieux Puit 2025, 750 מ"ל
+239|יין לבן מתוק צרפתי Chateleufe Bordeaux Blanc 2023, 750 מ"ל
+240|יין אדום יבש צרפתי Cheval Noble Bordeaux Supérieur 2023, 750 מ"ל
+241|יין אדום יבש איטלקי קיאנטי Rocca delle Macìe 2022, 750 מ"ל
+242|יין אדום יבש ספרדי Clos Mesorah, לא מבושל, 750 מ"ל
+243|יין אדום יבש צרפתי Crozes-Hermitage Cave de Tain 2023, 750 מ"ל
+244|יין אדום יבש ישראלי Dalton Estate קברנה סוביניון 2021, 750 מ"ל
+245|יין אדום יבש ישראלי Dalton Estate פטיט סירה 2021, 750 מ"ל
+246|יין לבן יבש ישראלי Dalton Estate שרדונה 2024, 750 מ"ל
+247|יין אדום יבש ישראלי Dalton Estate שיראז 2021, לא מבושל, 750 מ"ל
+248|יין אדום יבש ישראלי Dalton Estate שיראז 2023, 750 מ"ל
+249|יין אדום יבש ישראלי Dalton Family שיראז 2020, לא מבושל, 750 מ"ל
+250|יין אדום יבש ישראלי Dalton Galilo 2019, לא מבושל, 750 מ"ל
+251|יין אדום יבש ישראלי Dalton Estate פטיט סירה 2023, 750 מ"ל
+252|יין אדום יבש ישראלי Dalton Canaan אדום 2023, 750 מ"ל
+253|יין לבן חצי יבש ישראלי Dalton Canaan לבן 2023, 750 מ"ל
+254|יין אדום יבש צרפתי Domaine Chante Bise Côtes du Rhône 2021, 750 מ"ל
+255|יין לבן צרפתי Domaine de Panquelaine Coteaux du Giennois סוביניון בלאן, 750 מ"ל
+256|יין אדום יבש ספרדי EL26 2020, לא מבושל, 750 מ"ל
+257|יין אדום יבש ספרדי EL26 2021, לא מבושל, 750 מ"ל
+258|יין אדום צרפתי Étoiles de Mondorion Saint-Émilion Grand Cru 2021, 750 מ"ל
+259|יין לבן יבש ישראלי Gamla שרדונה, לא מבושל, 750 מ"ל

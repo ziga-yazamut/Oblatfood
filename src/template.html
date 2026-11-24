@@ -333,6 +333,65 @@ function norm(s) {
     .replace(/\s+/g, ' ').trim();
 }
 
+// ---------- Hebrew product names ----------
+// HE_BUILTIN[i] is the Hebrew name of BUILTIN.rows[i]. Any list (PDF or Excel) finds them by product name,
+// exact first, then by prefix (PDF names are often cut short). Products with no match get a dictionary name.
+var HE_BUILTIN = /*HE*/;
+var HE_EXACT = {}, HE_PREF = {}, HE_PL = 18;
+function heIndex() {
+  BUILTIN.rows.forEach(function (r, i) {
+    var h = HE_BUILTIN[i]; if (!h) return;
+    [r[0], r[1], r[0] && stripPrefix(r[0]), r[1] && stripPrefix(r[1])].forEach(function (n) {
+      if (!n) return; var k = norm(n);
+      if (!HE_EXACT[k]) HE_EXACT[k] = h;
+      if (k.length >= HE_PL) (HE_PREF[k.slice(0, HE_PL)] = HE_PREF[k.slice(0, HE_PL)] || []).push([k, h]);
+    });
+  });
+}
+var HE_WORDS = {
+  beef: 'בקר', veal: 'עגל', lamb: 'טלה', chicken: 'עוף', turkey: 'הודו', goose: 'אווז', duck: 'ברווז', meat: 'בשר', minced: 'טחון', breast: 'חזה', wings: 'כנפיים', wing: 'כנף',
+  thigh: 'ירך', drumstick: 'שוק', liver: 'כבד', neck: 'צוואר', necks: 'צווארים', shoulder: 'כתף', ribs: 'צלעות', chops: 'צלעות', ribeye: 'אנטריקוט', entrecote: 'אנטריקוט', brisket: 'בריסקט',
+  tongue: 'לשון', shank: 'שריר', fillet: 'פילה', tenderloin: 'פילה', steak: 'סטייק', schnitzel: 'שניצל', sausage: 'נקניק', sausages: 'נקניקיות', salami: 'סלמי', pastrami: 'פסטרמה',
+  fish: 'דג', salmon: 'סלמון', tuna: 'טונה', herring: 'הרינג', carp: 'קרפיון', cheese: 'גבינה', milk: 'חלב', cream: 'שמנת', butter: 'חמאה', yogurt: 'יוגורט', yoghurt: 'יוגורט', eggs: 'ביצים',
+  wine: 'יין', red: 'אדום', white: 'לבן', rose: 'רוזה', sparkling: 'מבעבע', dry: 'יבש', sweet: 'מתוק', beer: 'בירה', juice: 'מיץ', water: 'מים', mineral: 'מינרליים', tea: 'תה', coffee: 'קפה',
+  chocolate: 'שוקולד', cookies: 'עוגיות', biscuits: 'ביסקוויטים', cake: 'עוגה', wafer: 'וופל', candy: 'סוכריות', bar: 'חטיף', chips: "צ'יפס", crackers: 'קרקרים', nuts: 'אגוזים',
+  almond: 'שקדים', almonds: 'שקדים', walnut: 'אגוזי מלך', hazelnut: 'אגוזי לוז', peanut: 'בוטנים', pistachio: 'פיסטוק', sesame: 'שומשום', honey: 'דבש', jam: 'ריבה', spread: 'ממרח',
+  sauce: 'רוטב', ketchup: "קטשופ", mayonnaise: 'מיונז', mustard: 'חרדל', oil: 'שמן', olive: 'זית', olives: 'זיתים', vinegar: 'חומץ', salt: 'מלח', pepper: 'פלפל', sugar: 'סוכר', flour: 'קמח',
+  rice: 'אורז', pasta: 'פסטה', noodles: 'אטריות', soup: 'מרק', bread: 'לחם', rolls: 'לחמניות', pickles: 'חמוצים', cucumber: 'מלפפון', cucumbers: 'מלפפונים', tomato: 'עגבניות', corn: 'תירס',
+  beans: 'שעועית', chickpeas: 'חומוס', lentils: 'עדשים', mushrooms: 'פטריות', potato: 'תפוחי אדמה', potatoes: 'תפוחי אדמה', onion: 'בצל', garlic: 'שום', apple: 'תפוחים', orange: 'תפוזים',
+  lemon: 'לימון', strawberry: 'תות', cherry: 'דובדבן', peach: 'אפרסק', pear: 'אגס', grape: 'ענבים', raspberry: 'פטל', banana: 'בננה', mango: 'מנגו', pineapple: 'אננס', vanilla: 'וניל',
+  cocoa: 'קקאו', frozen: 'קפוא', smoked: 'מעושן', sliced: 'פרוס', grated: 'מגורר', dried: 'מיובש', roasted: 'קלוי', salted: 'מלוח', fresh: 'טרי', whole: 'שלם', light: 'לייט',
+  kosher: 'כשר', organic: 'אורגני', vegan: 'טבעוני', parve: 'פרווה', 'gluten-free': 'ללא גלוטן', 'sugar-free': 'ללא סוכר', soap: 'סבון', shampoo: 'שמפו', detergent: 'אבקת כביסה',
+  cleaner: 'חומר ניקוי', sponge: 'ספוג', foil: 'נייר כסף', napkins: 'מפיות', napkin: 'מפיות', candles: 'נרות', candle: 'נר', cups: 'כוסות', plates: 'צלחות', paper: 'נייר', toilet: 'טואלט'
+};
+var HE_MODS = ['אדום', 'לבן', 'רוזה', 'מבעבע', 'יבש', 'מתוק', 'קפוא', 'מעושן', 'פרוס', 'מגורר', 'מיובש', 'קלוי', 'מלוח', 'טרי', 'שלם', 'לייט', 'כשר', 'אורגני', 'טבעוני', 'פרווה', 'ללא גלוטן', 'ללא סוכר', 'טחון', 'מינרליים'];
+function heFallback(it) {
+  var src = it.shownEn.replace(/\([^)]*\)/g, ' '), out = [], latin = [], size = '';
+  var m = src.match(/(\d+(?:[.,]\d+)?)\s*(kg|g|gr|ml|l|cl)\b/i);
+  if (m) size = m[1].replace(',', '.') + ' ' + ({ kg: 'ק"ג', g: 'גרם', gr: 'גרם', ml: 'מ"ל', l: 'ליטר', cl: 'ס"ל' })[m[2].toLowerCase()];
+  src.replace(/[A-Za-zÀ-ž'-]+/g, function (w) {
+    var h = HE_WORDS[w.toLowerCase()];
+    if (h) { if (out.indexOf(h) < 0) out.push(h); }
+    else if (/^[A-ZÀ-Ž]/.test(w) && w.length > 1 && !out.length) latin.push(w);
+    return w;
+  });
+  if (!out.length) return null;
+  var mods = out.filter(function (h) { return HE_MODS.indexOf(h) >= 0; }), nouns = out.filter(function (h) { return HE_MODS.indexOf(h) < 0; });
+  if (nouns.length > 1) nouns = nouns.filter(function (h) { return h !== 'בשר'; });
+  out = nouns.reverse().concat(mods);
+  return out.join(' ') + (latin.length ? ' ' + latin.slice(0, 2).join(' ') : '') + (size ? ', ' + size : '');
+}
+function heName(it) {
+  if (it.he !== undefined) return it.he;
+  var keys = [norm(it.hu), norm(it.en), norm(it.shownHu), norm(it.shownEn)], h = null;
+  for (var i = 0; i < 4 && !h; i++) h = HE_EXACT[keys[i]] || null;
+  for (i = 0; i < 4 && !h; i++) {
+    var k = keys[i], c = k.length >= HE_PL && HE_PREF[k.slice(0, HE_PL)], best = 0;
+    if (c) c.forEach(function (e) { if ((k.indexOf(e[0]) === 0 || e[0].indexOf(k) === 0) && e[0].length > best) { best = e[0].length; h = e[1]; } });
+  }
+  return (it.he = h || heFallback(it));
+}
+
 // ---------- language (English / Hebrew) ----------
 var LANG = store('oblath.lang.v1') === 'he' ? 'he' : 'en';
 function L(en, he) { return LANG === 'he' ? he : en; }
@@ -817,6 +876,8 @@ function stepper(key) {
 // in Hebrew: a Hebrew name built from what the product is (type, taste, origin, size), shown bold on top
 function hebParts(it) {
   if (LANG !== 'he') return null;
+  var hn = heName(it);
+  if (hn) return { title: esc(hn), rest: it.f.bits.filter(function (b) { return !/\d/.test(b); }) };
   var f = it.f, head = [f.type ? tv(f.type) : catName(it.cat)];
   if (f.taste) head.push(tv(f.taste));
   if (f.origin) head.push(tv(f.origin));
@@ -1485,6 +1546,7 @@ $('langBtn').addEventListener('click', function () {
   var y = window.scrollY; loadList(LIST); renderChips(); run(false); renderBasket(); window.scrollTo(0, y);
 });
 applyLang();
+heIndex();
 loadList(store('oblath.list.v1') || BUILTIN);
 renderChips(); run(true); renderBasket();
 </script>
